@@ -1,0 +1,142 @@
+@font-face {
+    font-family: "BB";
+    src: url("Blackbird.ttf");
+}
+
+* {
+    font-family: 'bb';
+    text-transform: capitalize;
+}
+
+html {
+    background-color: black;
+}
+
+.gameBox {
+    position: relative;
+    background-color: aqua;
+    width: 40vw;
+    height: 50vh;
+    top: 25vh;
+    left: 28vw;
+}
+
+.title {
+    text-align: center;
+    background-color: black;
+    color: burlywood;
+    width: 40vw;
+}
+
+#display {
+    text-align: center;
+    color: chocolate;
+    background-color: black;
+    height: 10vh;
+    word-wrap: break-word;
+}
+
+#answerBox {
+    text-align: center;
+}
+
+#number {
+    width: 10vw;
+    border-radius: 5px;
+}
+
+#startGame,
+#submit {
+    height: 3vh;
+    width: 10vw;
+    background-color: darkblue;
+    border-radius: 5px;
+}
+
+#inp {
+    border-radius: 5px;
+    background-color: black;
+    color: darkgoldenrod;
+    height: 3vh;
+    width: 15vw;
+}
+
+#nameButton {
+    border-radius: 5px;
+    background-color: darkslateblue;
+}
+
+@media only screen and (max-width:400px) {
+    #startGame,
+    #submit {
+        height: 3vh;
+        width: 15vw;
+        font-size: 0.6em;
+        color: black;
+        font-weight: bold;
+    }
+    #inp {
+        height: 3vh;
+        width: 20vw;
+    }
+    #name {
+        font-size: 0.6em;
+    }
+    #numberDisplay {
+        font-size: 1em;
+    }
+    #display {
+        text-align: center;
+        color: chocolate;
+        background-color: black;
+        height: 5vh;
+        word-wrap: break-word;
+    }
+    .gameBox {
+        position: relative;
+        background-color: aqua;
+        width: 80vw;
+        height: 50vh;
+        top: 25vh;
+        left: 8vw;
+    }
+    .title {
+        text-align: center;
+        background-color: black;
+        color: burlywood;
+        width: 80vw;
+        font-size: 0.7em;
+    }
+    #number {
+        width: 15vw;
+    }
+}
+
+@media only screen and (max-width:1040px) {
+    .gameBox {
+        position: relative;
+        background-color: aqua;
+        width: 80vw;
+        height: 50vh;
+        top: 25vh;
+        left: 8vw;
+    }
+    .title {
+        text-align: center;
+        background-color: black;
+        color: burlywood;
+        width: 80vw;
+        font-size: 0.7em;
+    }
+    #startGame,
+    #submit {
+        height: 3vh;
+        width: 15vw;
+        font-size: 0.6em;
+        color: black;
+        font-weight: bold;
+    }
+    #number {
+        width: 15vw;
+    }
+}
