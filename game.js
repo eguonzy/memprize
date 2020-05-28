@@ -83,7 +83,7 @@ function gamePlay() {
         correct.innerText = `correct:${right}`;
         submit.disabled = true
         setTimeout(() => {
-            numberDisplay.innerText = `passed:${right}||failed:${left} try again?`
+            numberDisplay.innerText = `passed:${right}||failed:${left}`
 
         }, 1500);
     }
