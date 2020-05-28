@@ -10,7 +10,7 @@ let correct = document.getElementById('correct');
 let wrong = document.getElementById('wrong');
 let right = 0;
 let left = 0;
-let sort = 8;
+let sort = 7;
 let total = 0
 inp.onkeyup = (event) => {
     if (event.keyCode === 13) {
@@ -29,10 +29,10 @@ guess.onkeyup = (event) => {
     if (event.keyCode === 13) {
         event.preventDefault();
         submit.click()
-        console.log(`sub`);
+
     }
 }
-let randomizer = Math.floor((Math.random() + 2))
+let randomizer = Math.floor((Math.random() + 3))
 submit.onclick = gamePlay
 
 function start() {
@@ -49,7 +49,7 @@ function start() {
 
         }, 2500);
         startGame.style.display = `none`
-        console.log(randomizer)
+
 
     }
 }
@@ -74,16 +74,16 @@ function gamePlay() {
 
         console.log(sort);
     } else {
-        wrong.innerText = left;
+
         correct.innerText = right;
         numberDisplay.style.display = `block`;
         numberDisplay.innerText = `wrong answer`;
         left++
 
-        correct.innerText = right;
+        correct.innerText = `correct:${right}`;
         submit.disabled = true
         setTimeout(() => {
-            numberDisplay.innerText = `passed:${right}||failed:${left}`
+            numberDisplay.innerText = `passed:${right}||failed:${left} try again?`
 
         }, 1500);
     }
