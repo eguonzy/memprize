@@ -1,33 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="" lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memorize</title>
     <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
     <script defer src="game.js"></script>
+
 </head>
 
-<body>
-    <div class="gameBox">
-        <div class='title'>TEST YOUR MEMORY</div>
+<body class="">
+    <div class="gameBox  bg-dark text-light">
+        <div class='title bg-dark text-light'>TEST YOUR MEMORY</div>
         <div>
             <span id="correct"></span>
-            <h3 id='name'>Name: <input type="text" id="inp" placeholder="e.g Kaide"></h3>
+            <h3 id='name'>Name: <input class="input" type="text" id="inp" placeholder=""></h3>
 
         </div>
-        <div id="display">
+        <div class="bg-light" id="display">
 
             <h1 id="numberDisplay"></h1>
         </div>
         </br>
         <div id='answerBox'>
 
-            <button id="startGame">start</button>
+            <button class='btn' id="startGame">start</button>
 
-            <input type="text" id='number' placeholder="00">
-            <button id='submit'>submit</button>
+            <input type="text" id='number' placeholder="000000">
+            <button class='btn' id='submit'>submit</button>
 
 
         </div>

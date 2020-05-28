@@ -9,7 +9,7 @@
 }
 
 html {
-    background-color: black;
+    background-color: khaki;
 }
 
 .gameBox {
@@ -45,8 +45,8 @@ html {
     border-radius: 5px;
 }
 
-#startGame,
-#submit {
+startGame,
+submit {
     height: 3vh;
     width: 10vw;
     background-color: darkblue;
@@ -67,8 +67,8 @@ html {
 }
 
 @media only screen and (max-width:400px) {
-    #startGame,
-    #submit {
+    startGame,
+    submit {
         height: 3vh;
         width: 15vw;
         font-size: 0.6em;
@@ -128,8 +128,8 @@ html {
         width: 80vw;
         font-size: 0.7em;
     }
-    #startGame,
-    #submit {
+    startGame,
+    submit {
         height: 3vh;
         width: 15vw;
         font-size: 0.6em;
