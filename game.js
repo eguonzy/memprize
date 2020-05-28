@@ -32,7 +32,7 @@ guess.onkeyup = (event) => {
 
     }
 }
-let randomizer = Math.floor((Math.random() + 3))
+let randomizer = Math.floor((Math.random() * 10) + 3)
 submit.onclick = gamePlay
 
 function start() {
@@ -64,7 +64,7 @@ function gamePlay() {
         sort++
 
         correct.innerText = `correct:${right}`;
-        randomizer *= 13
+        randomizer *= 17
         numberDisplay.style.display = `block`;
         numberDisplay.innerText = randomizer;
         setTimeout(() => {
