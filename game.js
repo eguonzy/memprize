@@ -14,6 +14,7 @@ let sort = Math.floor(Math.random() * 10 + 10)
 console.log(sort)
 let total = 0
 submit.disabled = true
+guess.disabled = true
 inp.onkeyup = (event) => {
     if (event.keyCode === 13) {
 
@@ -43,13 +44,14 @@ function start() {
         numberDisplay.innerText = `enter name`
 
     } else {
-        submit.disabled = false
+
         name.innerHTML = `welcome ${inp.value}!!!`
         name.style.textTransform = `capitalize`
         inp.style.display = `none`
         guess.disabled = true
         numberDisplay.innerText = randomizer;
         setTimeout(() => {
+            submit.disabled = false
             numberDisplay.innerText = "enter number"
             guess.disabled = false
             guess.focus()
@@ -64,15 +66,7 @@ function start() {
 
 
 function gamePlay() {
-    /*
-        let end = setTimeout(() => {
-            numberDisplay.innerText = `passed:${right}||failed:${left}`
-            submit.disabled = true
-            guess.value = ``
-            correct.innerText = `correct:${right}`;
-        }, 10000, );*/
 
-    total++
     if (guess.value == randomizer) {
 
 
@@ -82,24 +76,19 @@ function gamePlay() {
         correct.innerText = right;
         right++
         sort++
+        submit.disabled = true
         guess.disabled = true
         correct.innerText = `correct:${right}`;
         randomizer *= Math.floor(Math.random() * 10 + 10);
         numberDisplay.style.display = `block`;
         numberDisplay.innerText = randomizer;
         setTimeout(() => {
+            submit.disabled = false
             numberDisplay.innerText = "enter number"
             guess.disabled = false
             guess.focus()
         }, 5000);
-        /* setTimeout(() => {
-             if (!submit.click()) {
-                 numberDisplay.innerText = `passed:${right}||failed:${left}`
-                 submit.disabled = true
-                 guess.value = ``
-                 correct.innerText = `correct:${right}`;
-             }
-         }, 10000, );*/
+
 
         console.log(sort);
     } else {
@@ -115,12 +104,6 @@ function gamePlay() {
 
         }, 1000);
     }
-    /*
-        end = setTimeout(() => {
-            numberDisplay.innerText = `passed:${right}||failed:${left}`
-            submit.disabled = true
-            guess.value = ``
-            correct.innerText = `correct:${right}`;
-        }, 10000, );*/
+
 
 }
