@@ -9,9 +9,8 @@ let submit = document.getElementById(`submit`)
 let correct = document.getElementById('correct');
 let wrong = document.getElementById('wrong');
 let right = 0;
-let left = 0;
+
 let sort = Math.floor(Math.random() * 10 + 10)
-console.log(sort)
 let total = 0
 submit.disabled = true
 guess.disabled = true
@@ -37,7 +36,7 @@ guess.onkeyup = (event) => {
 }
 let randomizer = Math.floor((Math.random() * 50) + 5)
 submit.onclick = gamePlay
-console.log(randomizer)
+
 
 function start() {
     if (inp.value == "" || inp.value.match(/[1234567890]/) || inp.value.match(/[-,+*/!@#$%^&~{}=`|]/)) {
@@ -49,7 +48,10 @@ function start() {
         name.style.textTransform = `capitalize`
         inp.style.display = `none`
         guess.disabled = true
-        numberDisplay.innerText = randomizer;
+        let string = randomizer.toString().split('')
+        let numberG = string.join(' ')
+        numberDisplay.innerText = numberG;
+
         setTimeout(() => {
             submit.disabled = false
             numberDisplay.innerText = "enter number"
@@ -62,45 +64,44 @@ function start() {
     }
 }
 
-
-
-
 function gamePlay() {
 
     if (guess.value == randomizer) {
-
-
-
-        console.log(`cleared`)
         guess.value = ``
         correct.innerText = right;
         right++
-        sort++
         submit.disabled = true
         guess.disabled = true
         correct.innerText = `correct:${right}`;
         randomizer *= Math.floor(Math.random() * 10 + 10);
         numberDisplay.style.display = `block`;
-        numberDisplay.innerText = randomizer;
+        let string = randomizer.toString().split('')
+        let numberG = string.join(' ')
+        numberDisplay.innerText = numberG;
+        let timer = 5000
+        if (right >= 10 && right < 15) {
+            timer = 8000
+        } else if (right >= 15) {
+            timer = 10000
+        } else {
+            timer = 5000
+        }
+        console.log(timer)
         setTimeout(() => {
             submit.disabled = false
             numberDisplay.innerText = "enter number"
             guess.disabled = false
             guess.focus()
-        }, 5000);
-
-
-        console.log(sort);
+        }, timer);
     } else {
-        numberDisplay.style.display = `block`;
+        numberDisplay.style.display = `block `;
         numberDisplay.innerText = `wrong answer`;
-        left++
         guess.value = ``
         guess.disabled = true
-        correct.innerText = `correct:${right}`;
+        correct.innerText = `correct: ${right}`;
         submit.disabled = true
         return setTimeout(() => {
-            numberDisplay.innerText = `passed:${right}||failed:${left}`
+            numberDisplay.innerText = `passed: ${right}`
 
         }, 1000);
     }
